@@ -2,7 +2,7 @@ from flask import Flask, render_template
 from auth.routes import auth_bp
 
 app = Flask(__name__)
-app.secret_key = "infinite-secret-key"
+app.secret_key = ""
 
 # REGISTER BLUEPRINT
 app.register_blueprint(auth_bp)
