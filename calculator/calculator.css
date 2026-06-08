@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff; /* clean white background */
+    font-family: Arial, sans-serif;
+}
+
+/* Calculator Card */
+.calculator {
+    width: 320px;
+    background: #64648f;
+    padding: 22px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    border: 1px solid #e6e6e6;
+}
+
+/* Display */
+.display {
+    width: 100%;
+    height: 70px;
+    background: #111;
+    color: #00ff88;
+    font-size: 28px;
+    text-align: right;
+
+    /* FIXED: spacing issue */
+    padding: 15px;
+    margin-bottom: 18px;
+
+    border-radius: 12px;
+    box-sizing: border-box; /* IMPORTANT fix for alignment */
+
+    overflow-x: auto;
+}
+
+/* Buttons Grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* Buttons */
+button {
+    padding: 18px;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background: #e9e9ef;
+    color: #222;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: #dcdce5;
+}
+
+/* Operators */
+.operator {
+    background: #ffb347;
+    color: #000;
+}
+
+.operator:hover {
+    background: #ffa126;
+}
+
+/* Equal button */
+.equal {
+    background: #4caf50;
+    color: white;
+    grid-column: span 2;
+}
+
+.equal:hover {
+    background: #3fa046;
+}
+
+/* Clear button */
+.clear {
+    background: #ff5c5c;
+    color: white;
+}
+
+.clear:hover {
+    background: #e64545;
+}
+.history-panel {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    width: 220px;
+    height: 300px;
+
+    background: #f4f4f6;
+    border-radius: 12px;
+    padding: 10px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+
+    overflow-y: auto;
+    display: none;
+}
+
+.history-panel.show {
+    display: block;
+}
+
+.history-item {
+    background: white;
+    margin-bottom: 8px;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.history-item:hover {
+    background: #eaeaea;
+}
+body.dark {
+    background: #121212;
+}
+
+.calculator.dark {
+    background: #1f1f1f;
+    border-color: #333;
+}
+
+.calculator.dark button {
+    background: #2c2c2c;
+    color: white;
+}
+
+.calculator.dark .display {
+    background: #000;
+    color: #00ff88;
+}
+
+.history-panel.dark {
+    background: #1f1f1f;
+    color: white;
+}
+
+.history-panel.dark .history-item {
+    background: #2c2c2c;
+    color: white;
+}
