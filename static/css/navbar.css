@@ -1,0 +1,32 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 10px 24px;
+  background: var(--bg);
+  border-bottom: 1px solid #222;
+}
+
+.navbar a {
+  color: var(--text);
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: var(--accent);
+}
+
+.logo {
+  height: 36px;
+  width: auto;
+  margin-right: 20px;
+}
+
+.navbar button {
+  background: none;
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 18px;
+}

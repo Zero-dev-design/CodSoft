@@ -1,0 +1,243 @@
+.hero {
+  height: 100vh;
+  background: radial-gradient(
+    circle at top,
+    #0f1020 0%,
+    #070710 60%,
+    #050508 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 79, 216, 0.12),
+    transparent 60%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 24px;
+}
+.hero-title {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.hero-title span {
+  background: linear-gradient(
+    90deg,
+    #ff4fd8,
+    #7a5cff,
+    #3fa9ff
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 6s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% }
+  100% { background-position: 200% }
+}
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: #cfcfe8;
+  max-width: 600px;
+  margin: 0 auto 32px;
+  line-height: 1.6;
+}
+.btn.primary {
+  background: linear-gradient(90deg, #ff4fd8, #7a5cff);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-right: 12px;
+}
+
+.btn.ghost {
+  border: 1px solid rgba(255,255,255,0.25);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+
+.section {
+  padding: 100px 10%;
+  background: black;
+  color:white;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.game-card {
+  background: #15152a;
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.game-thumb {
+  height: 140px;
+  background: #222;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+.about-services {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.about-services h3 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.services-card {
+    background: #15152a;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: 0.3s ease;
+}
+
+.services-card:hover {
+    transform: translateY(-8px);
+    border-color: #7a5cff;
+    box-shadow: 0 15px 30px rgba(122,92,255,0.2);
+}
+
+.services-tag {
+    display: inline-block;
+    background: linear-gradient(90deg, #ff4fd8, #7a5cff);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.services-card h4 {
+    color: #fff;
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+}
+
+.services-card p {
+    color: #cfcfe8;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact-section {
+    text-align: center;
+    background: #050508;
+}
+
+.contact-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #15152a;
+    padding: 50px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(122,92,255,0.15);
+}
+
+.contact-card h2 {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+}
+
+.contact-text {
+    color: #cfcfe8;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.contact-item span {
+    font-size: 1.3rem;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer-container {
+    background: #050508;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 30px;
+    text-align: center;
+}
+
+.footer-container p {
+    color: #cfcfe8;
+    margin: 6px 0;
+}
+
+.copyright {
+    color: #8d8da8;
+    font-size: 0.9rem;
+}

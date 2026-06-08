@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <title>Infinite Studio</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+  <script src="{{ url_for('static', filename='js/about.js') }}"></script>
+</head>
+<body>
+
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1 class="hero-title">
+       <span>Dream Breach ∞ Studio</span>
+    </h1>
+
+    <p class="hero-subtitle">
+      Crafting immersive worlds beyond imagination.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#games" class="btn primary">Explore Games</a>
+      <a href="#about" class="btn ghost">About Us</a>
+    </div>
+  </div>
+</section>
+
+
+<section id="about" class="about-section">
+  <div class="about-container">
+
+    <h2 class="about-title">About Us</h2>
+
+    <p class="about-intro">
+      Dream Breach ∞ Studio is a boundaryless creative space where imagination,
+      emotion, and technology converge. We don’t follow genres — we explore them.
+      From psychological horror to neon-drenched sci-fi, from intimate stories to
+      expansive worlds, we craft experiences meant to be felt, not just played.
+    </p>
+
+    <!-- Showcase Block 1 -->
+    <div class="about-block">
+      <div class="about-text">
+        <h3>Worlds & Stories</h3>
+        <p>
+          We specialize in lore-heavy, story-driven universes — immersive worlds
+          built with emotional depth, mystery, tension, and meaning. Every project
+          begins with a question: <em>what should the player feel?</em>
+        </p>
+      </div>
+
+      <div class="about-media">
+        <img src="{{ url_for('static', filename='assets/images/about/worlds.jpg') }}" alt="Concept Art">
+      </div>
+    </div>
+
+    <!-- Showcase Block 2 -->
+    <div class="about-block reverse" id="#games">
+        <div class="about-text">
+            <h3>Craft & Experimentation</h3>
+            <p>
+            From stylized assets to realistic models, from experimental concepts to
+            polished systems — we design gameplay elements, worlds, and visuals that
+            push beyond convention while remaining deeply immersive.
+            </p>
+        </div>
+
+        <div class="about-crawler">
+            <div class="card-track">
+
+                    <div class="about-card" style="background-image: url('{{ url_for('static', filename='assets/images/about/card1.jpg') }}')"></div>
+                    <div class="about-card" style="background-image: url('{{ url_for('static', filename='assets/images/about/card2.jpg') }}')"></div>
+                    <div class="about-card" style="background-image: url('{{ url_for('static', filename='assets/images/about/card3.jpg') }}')"></div>
+                    <div class="about-card" style="background-image: url('{{ url_for('static', filename='assets/images/about/card4.jpg') }}')"></div>
+                    <div class="about-card" style="background-image: url('{{ url_for('static', filename='assets/images/about/card5.jpg') }}')"></div>
+                    <div class="about-card" style="background-image: url('{{ url_for('static', filename='assets/images/about/card6.jpg') }}')"></div>
+                    <div class="about-card" style="background-image: url('{{ url_for('static', filename='assets/images/about/card7.jpg') }}')"></div>
+                    <div class="about-card" style="background-image: url('{{ url_for('static', filename='assets/images/about/card8.jpg') }}')"></div>
+                    <div class="about-card" style="background-image: url('{{ url_for('static', filename='assets/images/about/card9.jpg') }}')"></div>
+                    <div class="about-card" style="background-image: url('{{ url_for('static', filename='assets/images/about/card10.jpg') }}')"></div>
+                    <div class="about-card" style="background-image: url('{{ url_for('static', filename='assets/images/about/card11.jpg') }}')"></div>
+                    <div class="about-card" style="background-image: url('{{ url_for('static', filename='assets/images/about/card12.jpg') }}')"></div>
+
+                    <div class="about-card" style="background-image: url('{{ url_for('static', filename='assets/images/about/card1.jpg') }}')"></div>
+                    <div class="about-card" style="background-image: url('{{ url_for('static', filename='assets/images/about/card2.jpg') }}')"></div>
+                    <div class="about-card" style="background-image: url('{{ url_for('static', filename='assets/images/about/card3.jpg') }}')"></div>
+                    <div class="about-card" style="background-image: url('{{ url_for('static', filename='assets/images/about/card4.jpg') }}')"></div>
+                    <div class="about-card" style="background-image: url('{{ url_for('static', filename='assets/images/about/card5.jpg') }}')"></div>
+                    
+                    <div class="about-card" style="background-image: url('{{ url_for('static', filename='assets/images/about/card6.jpg') }}')"></div>
+                    <div class="about-card" style="background-image: url('{{ url_for('static', filename='assets/images/about/card7.jpg') }}')"></div>
+                    <div class="about-card" style="background-image: url('{{ url_for('static', filename='assets/images/about/card8.jpg') }}')"></div>
+                    <div class="about-card" style="background-image: url('{{ url_for('static', filename='assets/images/about/card9.jpg') }}')"></div>
+                    <div class="about-card" style="background-image: url('{{ url_for('static', filename='assets/images/about/card10.jpg') }}')"></div>
+                    <div class="about-card" style="background-image: url('{{ url_for('static', filename='assets/images/about/card11.jpg') }}')"></div>
+                    <div class="about-card" style="background-image: url('{{ url_for('static', filename='assets/images/about/card12.jpg') }}')"></div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="about-services">
+    <h3>Services</h3>
+
+    <div class="services-grid">
+
+        <div class="services-card">
+            <span class="services-tag">3D ANIMATION</span>
+            <h4>Cinematic & Product Animation</h4>
+            <p>
+                High-quality 3D animations for products, advertisements,
+                showcases, cinematics, and promotional content with smooth
+                motion and professional visual storytelling.
+            </p>
+        </div>
+
+        <div class="services-card">
+            <span class="services-tag">3D MODELING</span>
+            <h4>Model Creation & Optimization</h4>
+            <p>
+                Custom 3D models for products, environments, props, and
+                characters. Includes remeshing, retopology, high-poly to
+                low-poly conversion, and game-ready asset preparation.
+            </p>
+        </div>
+
+        <div class="services-card">
+            <span class="services-tag">GAME DEVELOPMENT</span>
+            <h4>Storytelling & World Building</h4>
+            <p>
+                Creative game concepts, storyline development, character
+                creation, level planning, and immersive world-building for
+                interactive experiences and indie game projects.
+            </p>
+        </div>
+
+    </div>
+</div>
+  </div>
+</section>
+
+<section id="contact" class="section contact-section">
+
+    <div class="contact-card">
+
+        <h2>Let's Create Something Amazing</h2>
+
+        <p class="contact-text">
+            Interested in 3D modeling, animation, game asset creation,
+            or creative collaboration? Feel free to get in touch.
+            I'm always open to discussing new projects and ideas.
+        </p>
+
+        <div class="contact-info">
+
+            <div class="contact-item">
+                <span>📧</span>
+                <p>contact@infinitestudio.dev</p>
+            </div>
+
+            <div class="contact-item">
+                <span>🎮</span>
+                <p>Game Design & Development</p>
+            </div>
+
+            <div class="contact-item">
+                <span>🎨</span>
+                <p>3D Modeling & Animation Services</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer class="footer-container">
+    <p>Thank you for visiting my portfolio.</p>
+    <p class="copyright">
+        © 2026 Sagar Biswas. All Rights Reserved.
+    </p>
+</footer>
+
+{% endblock %}
+</body>
+</html>

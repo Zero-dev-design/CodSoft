@@ -1,0 +1,189 @@
+.about-section {
+  position: relative;
+  padding: 120px 6%;
+  background: linear-gradient(
+    120deg,
+    rgba(40, 20, 70, 0.35),
+    rgba(20, 30, 60, 0.35)
+  );
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Title */
+.about-title {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  position: relative;
+  transition: color 0.4s ease;
+}
+
+.about-title:hover {
+  color: #b88cff;
+}
+
+/* Neon divider */
+.about-title::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 2px;
+  margin: 14px auto 0;
+  background: linear-gradient(90deg, #b88cff, #5ecbff);
+  opacity: 0.7;
+}
+
+/* Intro */
+.about-intro {
+  max-width: 760px;
+  margin: 40px auto 100px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  opacity: 0.85;
+}
+
+/* Blocks */
+.about-block {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 140px;
+}
+
+.about-block.reverse {
+    min-height: 500px;
+  flex-direction: row-reverse;
+}
+.about-crawler:hover .card-track {
+  animation-play-state: paused;
+}
+.about-text {
+  flex: 1;
+  text-align: left;
+}
+
+.about-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+}
+
+.about-text p {
+  opacity: 0.85;
+  line-height: 1.7;
+}
+
+/* Media */
+.about-media img {
+  width: 50%;
+  max-width: 460px;
+  border-radius: 16px;
+  opacity: 0.9;
+}
+
+.about-crawler {
+  overflow: hidden;
+  width: 50%;
+}
+
+.card-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: infiniteCrawl 30s linear infinite;
+}
+
+@keyframes infiniteCrawl {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.about-card {
+  width: 180px;
+  height: 260px;
+  border-radius: 14px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0.45;
+  transition: 
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+
+.about-card:hover {
+  opacity: 1;
+  transform: scale(1.04);
+}
+
+
+@keyframes crawl {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Projects */
+.about-projects h3 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  padding: 40px 20px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 18px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
+.project-tag {
+  font-size: 0.75rem;
+  opacity: 0.6;
+  letter-spacing: 1px;
+}
+.project-card h4 {
+  margin: 16px 0;
+  font-size: 1.2rem;
+}
+/* Responsive */
+@media (max-width: 900px) {
+    .about-block {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .about-block.reverse {
+        flex-direction: column;
+    }
+    
+    .about-text {
+        text-align: center;
+    }
+    
+    .about-crawler {
+        width: 100%;
+        overflow: hidden;
+        margin-top: 30px;
+    }
+    }

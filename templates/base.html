@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <title>Infinite Studio</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/theme.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+</head>
+<body>
+
+<nav class="navbar">
+  <img src="{{ url_for('static', filename='assets/images/logo-placeholder.png') }}" class="logo">
+
+  <a href="/">Home</a>
+  <a href="/news">News</a>
+  <!-- <a href="/store">Store</a>
+  <a href="/games">Games</a>
+ -->
+
+  {% if session.get("user_id") %}
+    <span>Hi, {{ session.get("username") }}</span>
+    <a href="/logout">Logout</a>
+
+    {% if session.get("role_id") == 1 %}
+      <a href="/admin/users">Admin Panel</a>
+    {% endif %}
+  {% else %}
+    <a href="/login">Login</a>
+    <a href="/signup">Sign Up</a>
+  {% endif %}
+
+  <button id="theme-toggle">🌙</button>
+</nav>
+{% block content %}{% endblock %}
+<script src="{{ url_for('static', filename='js/themeToggle.js') }}"></script>
+<script src="{{ url_for('static', filename='js/scroll.js') }}"></script>
+</body>
+</html>
